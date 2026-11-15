@@ -9,7 +9,7 @@ compatibility_date = "2026-11-01"
 [vars]
 PUBLIC_ORIGIN = "https://login.flisk.si"
 # The public half of SIGNING_KEY (raw, base64url). Sites check tokens with it; it is not secret.
-PUBLIC_KEY = ""
+PUBLIC_KEY = "g_3cGlqaMDf4mM4Bgfv8EO6js7yW_bcSW7cOUpSwLc0"
 
 [[routes]]
 pattern = "login.flisk.si"
