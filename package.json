@@ -1,0 +1,6 @@
+{
+  "name": "flisk-login",
+  "private": true,
+  "type": "module",
+  "scripts": { "test": "bun test", "keys": "bun scripts/make-keys.mjs", "deploy": "bunx wrangler@4 deploy" }
+}

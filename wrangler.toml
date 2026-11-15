@@ -1,0 +1,16 @@
+# login.flisk.si: ONE GitHub sign-in for every Flisk site. A site sends the visitor to /start?return=<its page>; the visitor
+# signs in with GitHub here; we send them back with a 60-second signed token that says who they are and for which site.
+# The GitHub token is thrown away at once. Secrets: GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET, SIGNING_KEY, STATE_SECRET
+# (bun run keys makes SIGNING_KEY and the public key). Deploy by hand: bunx wrangler@4 deploy.
+name = "flisk-login"
+main = "src/index.js"
+compatibility_date = "2026-11-01"
+
+[vars]
+PUBLIC_ORIGIN = "https://login.flisk.si"
+# The public half of SIGNING_KEY (raw, base64url). Sites check tokens with it; it is not secret.
+PUBLIC_KEY = ""
+
+[[routes]]
+pattern = "login.flisk.si"
+custom_domain = true
